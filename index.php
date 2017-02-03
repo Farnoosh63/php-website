@@ -8,6 +8,6 @@ use Monolog\Handler\StreamHandler;
 $log = new Logger('name');
 $log->pushHandler(new StreamHandler('app.txt', Logger::WARNING));
 
-$log->addWarning('Foo');
+$log->addWarning('Oh noes');
 
 echo "hello word"; ?>
