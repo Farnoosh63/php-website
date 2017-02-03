@@ -1,0 +1,12 @@
+{
+    "name": "farnoosh/php",
+    "authors": [
+        {
+            "name": "Farnoosh",
+            "email": "farnoosh@pdx.edu"
+        }
+    ],
+    "require": {
+        "monolog/monolog": "^1.22"
+    }
+}
