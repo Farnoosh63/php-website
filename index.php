@@ -1,10 +1,12 @@
 <?php
-
 require 'vendor/autoload.php';
 date_default_timezone_set('America/Los_Angeles');
 
-$log = new Monolog\Logger('name');
-$log->pushHandler(new Monolog\Handler\StreamHandler('app.txt', Monolog\Logger::WARNING));
+use Monolog\logger;
+use Monolog\Handler\StreamHandler;
+
+$log = new Logger('name');
+$log->pushHandler(new StreamHandler('app.txt', Logger::WARNING));
 
 $log->addWarning('Foo');
 
