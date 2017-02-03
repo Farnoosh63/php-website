@@ -28,11 +28,22 @@ class ComposerStaticInitd55720d0e19656baf54cb441ca2e02be
         ),
     );
 
+    public static $prefixesPsr0 = array (
+        'S' => 
+        array (
+            'Slim' => 
+            array (
+                0 => __DIR__ . '/..' . '/slim/slim',
+            ),
+        ),
+    );
+
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInitd55720d0e19656baf54cb441ca2e02be::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInitd55720d0e19656baf54cb441ca2e02be::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInitd55720d0e19656baf54cb441ca2e02be::$prefixesPsr0;
 
         }, null, ClassLoader::class);
     }
