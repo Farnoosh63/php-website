@@ -1,1 +1,4 @@
-<?php echo "hello word"; ?>
+<?php
+
+require 'vendor/autoload.php';
+echo "hello word"; ?>
