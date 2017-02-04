@@ -11,9 +11,20 @@ date_default_timezone_set('America/Los_Angeles');
 // $log->addWarning('Oh noes');
 
 $app = new \Slim\Slim();
-$app->get('/hello/:name', function ($name) {
-    echo "Hello, $name";
+
+
+// $app->get('/hello/:name', function ($name) {
+//     echo "Hello, $name";
+// });
+
+$app->get('/', function(){
+  echo "Hello, this is the home page";
 });
+
+$app->get('/contact', function(){
+  echo "feel free to contact us.";
+});
+
 $app->run();
 
 // echo "hello word";
