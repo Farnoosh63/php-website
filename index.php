@@ -21,9 +21,10 @@ $app->get('/', function() use($app){
   $app->render('index.html');
 });
 
-$app->get('/contact', function(){
-  echo "feel free to contact us.";
+$app->get('/contact', function() use($app){
+  $app->render('contact.html');
 });
+
 
 $app->run();
 
