@@ -17,8 +17,8 @@ $app = new \Slim\Slim();
 //     echo "Hello, $name";
 // });
 
-$app->get('/', function(){
-  echo "Hello, this is the home page";
+$app->get('/', function() use($app){
+  $app->render('index.html');
 });
 
 $app->get('/contact', function(){
